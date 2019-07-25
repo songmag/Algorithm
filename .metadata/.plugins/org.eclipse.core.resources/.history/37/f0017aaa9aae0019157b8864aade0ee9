@@ -1,0 +1,5 @@
+package GraphAdapt;
+
+public interface GraphAdapt {
+
+}

@@ -1,0 +1,14 @@
+package GraphAdapt;
+
+import Graph.GraphClass;
+import Graph.GraphClass.EdgeInfo;
+import Graph.GraphClass.Vertex;
+
+public class DFS implements GraphAdapt {
+	@Override
+	public void run(GraphClass graph) {
+	}
+	public void re_Process(Vertex vertex, EdgeInfo edge)
+	{
+	}
+}
