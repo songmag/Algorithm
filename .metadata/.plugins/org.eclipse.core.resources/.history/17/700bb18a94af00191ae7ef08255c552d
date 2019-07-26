@@ -1,0 +1,68 @@
+package GraphAdapt;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+import Graph.GraphClass;
+import Graph.GraphClass.EdgeInfo;
+import Graph.GraphClass.Vertex;
+
+public class DijkstraAlgorithm implements GraphAdapt {
+	private int[] dist;
+	@Override
+	public void run(GraphClass graph) {
+		
+		// TODO Auto-generated method stub
+		dist = new int[graph.getVertex().size()];
+		Vertex start_vertex;
+		for(int i = 0 ; i <dist.length ; i++)
+		{
+			dist[i] = Integer.MAX_VALUE;
+		}
+		{
+			System.out.print("In Start Vertex >>");
+			int start = new Scanner(System.in).nextInt();
+			start_vertex = graph.getVertex().get(start-1);
+			dist[start-1] = 0;
+		}
+		process(start_vertex);
+	}
+	private void process(Vertex start)
+	{
+		Vertex now_vertex;
+		now_vertex = start;
+		Iterator<EdgeInfo> iterator;
+		Stack<Vertex> stack  = new Stack<Vertex>();
+		while(now_vertex.getVisit()) {
+			iterator = now_vertex.getEdge().iterator();
+			while(iterator.hasNext())
+			{
+				EdgeInfo edge = (EdgeInfo)iterator.next();
+				if(edge.getVertexafter().getVisit()) continue;
+				stack.add(edge.getVertexafter());
+				dist[edge.getVertexafter().getNumber()] = (dist[edge.getVertexafter().getNumber()] > edge.getEdge_value()+dist[now_vertex.getNumber()])? 
+						edge.getEdge_value()+dist[now_vertex.getNumber()]:dist[edge.getVertexafter().getNumber()];
+			}
+			if(stack.isEmpty())
+			{
+				now_vertex.visitVertex();
+				break;
+			}
+			Vertex afterVisitVertex = stack.pop();
+			while(stack.isEmpty())
+			{
+				Vertex if_min = stack.pop();
+				if(dist[afterVisitVertex.getNumber()] > dist[if_min.getNumber()])
+				{
+					afterVisitVertex = if_min;
+				}
+			}
+		now_vertex.visitVertex();
+		System.out.println("Vertex >> "+ now_vertex.getNumber());
+		now_vertex = afterVisitVertex;
+		}
+	}
+}

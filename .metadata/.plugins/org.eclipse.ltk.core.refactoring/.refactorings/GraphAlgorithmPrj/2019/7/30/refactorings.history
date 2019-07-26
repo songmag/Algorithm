@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Inline local variable &apos;GraphAdapt.DijkstraAlgorithm.run().scanner&apos; in &apos;GraphAdapt.DijkstraAlgorithm.run()&apos;&#x0D;&#x0A;- Original project: &apos;GraphAlgorithmPrj&apos;&#x0D;&#x0A;- Original element: &apos;GraphAdapt.DijkstraAlgorithm.run().scanner&apos;" description="Inline local variable &apos;scanner&apos;" id="org.eclipse.jdt.ui.inline.temp" input="/src&lt;GraphAdapt{DijkstraAlgorithm.java" selection="515 32" stamp="1564136909517" version="1.0"/>
+</session>

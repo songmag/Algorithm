@@ -1,0 +1,18 @@
+package GraphAdapt;
+
+import Graph.GraphClass;
+import Graph.GraphClass.Vertex;
+
+public class DijkstraAlgorithm implements GraphAdapt {
+
+	@Override
+	public void run(GraphClass graph) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner();
+		
+	}
+	public void Process(Vertex start,Vertex finsih)
+	{
+		
+	}
+}

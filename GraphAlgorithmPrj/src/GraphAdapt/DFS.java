@@ -12,7 +12,7 @@ public class DFS implements GraphAdapt {
 		Vertex vertex = graph.getVertex().getFirst();
 		Iterator<EdgeInfo> iterator;
 		vertex.visitVertex();
-		System.out.println(vertex.getNumber());
+		System.out.println("DFS >> "+vertex.getNumber());
 		iterator = vertex.getEdge().iterator();
 		while(iterator.hasNext())
 		{
@@ -26,7 +26,7 @@ public class DFS implements GraphAdapt {
 		if(vertex.getVisit()) return;
 		Iterator<EdgeInfo> iterator;
 		vertex.visitVertex();
-		System.out.println(vertex.getNumber());
+		System.out.println("DFS >> " + vertex.getNumber());
 		iterator = vertex.getEdge().iterator();
 		while(iterator.hasNext())
 		{

@@ -25,10 +25,12 @@ public class GraphClass {
 	public static class Vertex
 	{
 		private final int number;
+		private final int key;
 		private boolean visit;
 		private LinkedList<EdgeInfo> edge;
 		public Vertex(int number) {
 			this.number = number;
+			this.key = number+1;
 			edge = new LinkedList<EdgeInfo>();
 			visit = false;
 		}
@@ -47,7 +49,7 @@ public class GraphClass {
 		}
 		public boolean getVisit() {return visit;}
 		public void visitVertex() {this.visit = true;}
-		
+		public int getKey() {return this.key;}
 	}
 	public GraphClass() {
 		vertex = new LinkedList<Vertex>();
@@ -63,10 +65,18 @@ public class GraphClass {
 	}
 	public void run(GraphAdapt adapt) {
 		adapt.run(this);
+		for(Vertex ver:vertex)
+		{
+			ver.visit = false;
+		}
 	}
-	public void connect_Vertex(Vertex after,Vertex before, int edge_value)
+	public void connect_Vertex_Twin(Vertex after,Vertex before, int edge_value)
 	{
 		after.addEdge(new EdgeInfo(before,edge_value));
+		before.addEdge(new EdgeInfo(after,edge_value));
+	}
+	public void connect_Vertex_Once(Vertex before,Vertex after, int edge_value)
+	{
 		before.addEdge(new EdgeInfo(after,edge_value));
 	}
 }
