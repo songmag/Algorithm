@@ -1,0 +1,11 @@
+package GraphAdapt;
+
+import Graph.GraphClass;
+
+public class DFS implements GraphAdapt {
+	@Override
+	public void run(GraphClass graph) {
+		GraphClass.Vertex vertex = new GraphClass.Vertex();
+		
+	}
+}

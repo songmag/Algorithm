@@ -1,0 +1,20 @@
+package Graph;
+
+import java.util.LinkedList;
+
+public class GraphClass {
+	LinkedList vertext;
+	LinkedList<EdgeInfo> edge;
+	class EdgeInfo()
+	{
+		int vertexbefor;
+		int vertexafter;
+		int edge_vavlue;
+		public EdgeInfo()
+		
+	};
+	class Vertex()
+	{
+		
+	};
+}

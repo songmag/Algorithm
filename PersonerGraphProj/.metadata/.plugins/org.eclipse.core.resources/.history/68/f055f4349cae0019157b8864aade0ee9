@@ -1,0 +1,80 @@
+package Graph;
+
+import java.util.LinkedList;
+
+import GraphAdapt.GraphAdapt;
+
+public class GraphClass {
+	LinkedList<Vertex> vertex;
+	public class EdgeInfo
+	{
+		private Vertex vertexafter;
+		private int edge_value;
+		public EdgeInfo( Vertex vertexafter, int edge_value) {
+			super();
+			this.vertexafter = vertexafter;
+			this.edge_value = edge_value;
+		}
+		public Vertex getVertexafter() {
+			return vertexafter;
+		}
+		public void setVertexafter(Vertex vertexafter) {
+			this.vertexafter = vertexafter;
+		}
+		public int getEdge_value() {
+			return edge_value;
+		}
+		public void setEdge_value(int edge_value) {
+			this.edge_value = edge_value;
+		}
+		public void connect_Vertex(Vertex after,Vertex before, int edge_value)
+		{
+			this.vertexafter = vertexafter;
+			this.edge_value = edge_value;
+		}
+		public void change_EdgeValue(int value) {this.edge_value = value;}
+	}
+	public class Vertex
+	{
+		private int number;
+		private LinkedList<EdgeInfo> edge;
+		public Vertex(int number) { 
+			this.number = number;
+			edge = new LinkedList<EdgeInfo>();
+		}
+		public int getNumber() {
+			return number;
+		}
+		public void setNumber(int number) {
+			this.number = number;
+		}
+		public LinkedList<EdgeInfo> getEdge() {
+			return edge;
+		}
+		public void addEdge(EdgeInfo edge) {
+			this.edge.add(edge);
+		}
+	}
+	public GraphClass() {
+		vertex = new LinkedList<Vertex>();
+	}
+	public GraphClass(LinkedList<Vertex> vertex, LinkedList<EdgeInfo> edge) {
+		this.vertex = vertex;
+		this.edge = edge;
+	}
+	public LinkedList<Vertex> getVertex() {
+		return vertex;
+	}
+	public void setVertex(LinkedList<Vertex> vertex) {
+		this.vertex = vertex;
+	}
+	public LinkedList<EdgeInfo> getEdge() {
+		return edge;
+	}
+	public void setEdge(LinkedList<EdgeInfo> edge) {
+		this.edge = edge;
+	}
+	public void run(GraphAdapt adapt) {
+		adapt.run(this);
+	}
+}

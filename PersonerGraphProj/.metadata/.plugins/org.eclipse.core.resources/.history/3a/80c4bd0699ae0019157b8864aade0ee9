@@ -1,0 +1,28 @@
+package Graph;
+
+import java.util.LinkedList;
+
+public class GraphClass {
+	LinkedList vertext;
+	LinkedList<EdgeInfo> edge;
+	class EdgeInfo
+	{
+		Vertex vertexbefor;
+		Vertex vertexafter;
+		int edge_value;
+		public EdgeInfo(Vertex vertexbefor, Vertex vertexafter, int edge_value) {
+			super();
+			this.vertexbefor = vertexbefor;
+			this.vertexafter = vertexafter;
+			this.edge_value = edge_value;
+		}
+		
+	}
+	class Vertex
+	{
+		int number;
+		public Vertex(int number) { this.number = number;}
+		
+		
+	}
+}

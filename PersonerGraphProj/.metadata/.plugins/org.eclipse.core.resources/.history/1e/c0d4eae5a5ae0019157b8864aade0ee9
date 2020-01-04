@@ -1,0 +1,21 @@
+import Graph.GraphClass;
+import Graph.GraphClass.Vertex;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GraphClass graph;
+		graph = new GraphClass();
+		graph.addVertex(new Vertex(1));
+		graph.addVertex(new Vertex(2));
+		graph.addVertex(new Vertex(3)));
+		graph.addVertex(new Vertex(4));
+		graph.addVertex(new Vertex(5));
+		graph.addVertex(new Vertex(6));
+		graph.addVertex(new Vertex(7));
+		graph.addVertex(new Vertex(8));
+		
+	}
+
+}

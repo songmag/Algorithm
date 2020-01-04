@@ -1,0 +1,16 @@
+import Graph.GraphClass;
+import Graph.GraphClass.Vertex;
+public class MainTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GraphClass graph;
+		graph = new GraphClass();
+		graph.addVertex(new GraphClass.Vertex(0));
+		graph.addVertex(new GraphClass.Vertex(1));
+		graph.addVertex(new GraphClass.Vertex(2));
+		graph.addVertex(new GraphClass.Vertex(3));
+		graph.addVertex(new GraphClass.Vertex(4));
+		graph.connect_Vertex(graph.getVertex().get(0),graph.getVertex().get(1), 3);
+	}
+}
