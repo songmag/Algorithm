@@ -59,19 +59,17 @@ class GameMap{
 		if(moveMent == 0)
 		{
 			run(x+1,y,0);
-			run(x+1,y+1,2);
 		}
 		else if(moveMent == 1)
 		{
 			run(x,y+1,1);
-			run(x+1,y+1,2);
 		}
 		else
 		{
 			run(x+1,y,0);
 			run(x,y+1,1);
-			run(x+1,y+1,2);
 		}
+		run(x+1,y+1,2);
 	}
 	public void startGame()
 	{
